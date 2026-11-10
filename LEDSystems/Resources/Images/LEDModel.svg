@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  LEDModel.svg : schéma du modèle d'une LED dans la bibliothèque LEDSystems
+  (partie électrique, partie photométrique, partie thermique).
+  © 2026 Stéphane Gounelle. Licence Creative Commons Attribution 4.0 International (CC BY 4.0) :
+  https://creativecommons.org/licenses/by/4.0/
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400"
+     font-family="DejaVu Sans, Arial, sans-serif" font-size="14">
+  <title>Modèle d'une LED</title>
+  <desc>Schéma électrique équivalent (résistance série, décalage de tension avec la température, diode de Shockley, résistance de fuite en parallèle), calcul photométrique vers le lightPort, chaleur Qth vers le heatPort qui représente la jonction.</desc>
+  <defs>
+    <marker id="fleche" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#333"/>
+    </marker>
+    <marker id="flecheR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#c0392b"/>
+    </marker>
+    <marker id="flecheJ" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#d4a000"/>
+    </marker>
+  </defs>
+  <rect width="800" height="400" fill="#ffffff"/>
+
+  <!-- ================= Partie électrique ================= -->
+  <text x="20" y="28" font-weight="bold">Électrique</text>
+  <g stroke="#1f4e9c" stroke-width="2.5" fill="none">
+    <!-- broche p -->
+    <line x1="30" y1="120" x2="90" y2="120"/>
+    <line x1="90" y1="120" x2="90" y2="80"/>
+    <line x1="90" y1="120" x2="90" y2="200"/>
+    <!-- branche principale -->
+    <line x1="90" y1="80" x2="120" y2="80"/>
+    <rect x="120" y="68" width="60" height="24" fill="#fff"/>
+    <line x1="180" y1="80" x2="210" y2="80"/>
+    <circle cx="232" cy="80" r="22" fill="#fff"/>
+    <line x1="254" y1="80" x2="290" y2="80"/>
+    <!-- diode -->
+    <path d="M290 62 L290 98 L324 80 Z" fill="#1f4e9c"/>
+    <line x1="324" y1="62" x2="324" y2="98"/>
+    <line x1="324" y1="80" x2="380" y2="80"/>
+    <!-- branche de fuite -->
+    <line x1="90" y1="200" x2="200" y2="200"/>
+    <rect x="200" y="188" width="60" height="24" fill="#fff"/>
+    <line x1="260" y1="200" x2="380" y2="200"/>
+    <line x1="380" y1="80" x2="380" y2="200"/>
+    <!-- broche n -->
+    <line x1="380" y1="120" x2="430" y2="120"/>
+  </g>
+  <circle cx="30" cy="120" r="5" fill="#1f4e9c"/>
+  <circle cx="430" cy="120" r="5" fill="#fff" stroke="#1f4e9c" stroke-width="2.5"/>
+  <text x="22" y="108" fill="#1f4e9c">p</text>
+  <text x="424" y="108" fill="#1f4e9c">n</text>
+  <text x="138" y="85" fill="#1f4e9c">R<tspan font-size="11" dy="4">s</tspan></text>
+  <text x="218" y="85" fill="#1f4e9c" font-size="12">ΔV<tspan font-size="10" dy="3">f</tspan></text>
+  <text x="218" y="124" fill="#555" font-size="12" text-anchor="middle" x2="0">
+    <tspan x="232">TCVf·(Tj − Tj_refVf)</tspan><tspan x="232" dy="15">+ dVf (dispersion)</tspan>
+  </text>
+  <text x="250" y="44" fill="#1f4e9c">Shockley : I<tspan font-size="10" dy="3">s</tspan><tspan dy="-3">, n, V</tspan><tspan font-size="10" dy="3">t</tspan><tspan dy="-3"> = kT</tspan><tspan font-size="10" dy="3">j</tspan><tspan dy="-3">/q</tspan></text>
+  <text x="216" y="205" fill="#1f4e9c">R<tspan font-size="11" dy="4">p</tspan></text>
+  <text x="200" y="232" fill="#555" font-size="12">fuite (1e8 Ω)</text>
+  <text x="30" y="262" fill="#333" font-size="13">I = I<tspan font-size="10" dy="3">s</tspan><tspan dy="-3">·[exp((V − R</tspan><tspan font-size="10" dy="3">s</tspan><tspan dy="-3">·I − ΔV</tspan><tspan font-size="10" dy="3">f</tspan><tspan dy="-3">) / (n·V</tspan><tspan font-size="10" dy="3">t</tspan><tspan dy="-3">)) − 1] + V/R</tspan><tspan font-size="10" dy="3">p</tspan></text>
+  <text x="30" y="284" fill="#555" font-size="12">Is, n, Rs : calés sur 3 points de la courbe If = f(Vf) du datasheet</text>
+
+  <!-- ================= Partie photométrique ================= -->
+  <text x="480" y="28" font-weight="bold">Photométrique</text>
+  <rect x="470" y="50" width="230" height="96" rx="6" fill="#fff8d6" stroke="#d4a000" stroke-width="2"/>
+  <text x="482" y="74" font-size="13">Iv = Iv_ref · f<tspan font-size="10" dy="3">I</tspan><tspan dy="-3">(I</tspan><tspan font-size="10" dy="3">f</tspan><tspan dy="-3">) · f</tspan><tspan font-size="10" dy="3">T</tspan><tspan dy="-3">(T</tspan><tspan font-size="10" dy="3">j</tspan><tspan dy="-3">)</tspan></text>
+  <text x="482" y="96" font-size="12" fill="#555">courbes relatives du datasheet</text>
+  <text x="482" y="118" font-size="13">Φ<tspan font-size="10" dy="3">v</tspan><tspan dy="-3"> = 2π·Iv/(m+1)</tspan></text>
+  <text x="482" y="138" font-size="13">P<tspan font-size="10" dy="3">opt</tspan><tspan dy="-3"> = Φ</tspan><tspan font-size="10" dy="3">v</tspan><tspan dy="-3"> / LER</tspan></text>
+  <path d="M330 72 C380 70 430 80 466 92" fill="none" stroke="#d4a000" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#flecheJ)"/>
+  <text x="420" y="92" font-size="12" fill="#8a6d00">I<tspan font-size="10" dy="3">f</tspan></text>
+  <!-- lightPort -->
+  <line x1="585" y1="146" x2="585" y2="186" stroke="#d4a000" stroke-width="2.5" marker-end="url(#flecheJ)"/>
+  <rect x="560" y="190" width="50" height="26" fill="#ffff7f" stroke="#55557f" stroke-width="2"/>
+  <text x="620" y="208" font-size="13">lightPort</text>
+  <text x="620" y="226" font-size="12" fill="#555">Φv (lm), Iv (cd)</text>
+
+  <!-- ================= Partie thermique ================= -->
+  <text x="20" y="320" font-weight="bold">Thermique</text>
+  <rect x="160" y="300" width="300" height="40" rx="6" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="174" y="325" font-size="13">Q<tspan font-size="10" dy="3">th</tspan><tspan dy="-3"> = P</tspan><tspan font-size="10" dy="3">elec</tspan><tspan dy="-3"> − P</tspan><tspan font-size="10" dy="3">opt</tspan><tspan dy="-3"> = V·I − P</tspan><tspan font-size="10" dy="3">opt</tspan></text>
+  <line x1="460" y1="320" x2="540" y2="320" stroke="#c0392b" stroke-width="2.5" marker-end="url(#flecheR)"/>
+  <rect x="546" y="306" width="28" height="28" fill="#c0392b"/>
+  <text x="584" y="318" font-size="13">heatPort = jonction</text>
+  <text x="584" y="336" font-size="12" fill="#555">T = Tj, reçoit Qth</text>
+  <text x="584" y="356" font-size="12" fill="#555">à relier à Thermal (plaque,</text>
+  <text x="584" y="372" font-size="12" fill="#555">température imposée…)</text>
+  <path d="M560 300 C560 250 420 250 330 104" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#flecheR)"/>
+  <text x="430" y="262" font-size="12" fill="#c0392b">Tj</text>
+  <path d="M560 300 C600 260 640 250 640 150" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#flecheR)"/>
+  <text x="650" y="262" font-size="12" fill="#c0392b">Tj</text>
+</svg>

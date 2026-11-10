@@ -1,0 +1,32 @@
+# Fichiers générés par les scripts de vérification (omc, compilation, résultats)
+build/
+
+# Résultats de simulation éventuellement produits ailleurs
+*_res.mat
+*_res.csv
+
+# Python
+__pycache__/
+*.pyc
+
+# Datasheets des fabricants (protégés par le droit d'auteur) : jamais publiés.
+# Seules les valeurs extraites, avec leur source, vont dans les records Data/.
+datasheets/
+
+# Fichiers produits par omc ou OMEdit quand on simule hors de build/
+*.c
+*.h
+*.o
+*.makefile
+*.libs
+*.log
+*_info.json
+*_init.xml
+*.exe
+
+# Sauvegardes d'éditeur
+*~
+*.bak
+*.swp
+.vscode/
+.idea/

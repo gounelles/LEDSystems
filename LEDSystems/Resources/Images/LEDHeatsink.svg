@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  LEDHeatsink.svg : dissipateur alu à ailettes radiales, avec la LED posée dessus.
+  Bibliothèque Modelica LEDSystems.
+  © 2026 Stéphane Gounelle. Licence Creative Commons Attribution 4.0 International (CC BY 4.0) :
+  https://creativecommons.org/licenses/by/4.0/
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="210" viewBox="0 0 170 210">
+  <title>Dissipateur alu à ailettes</title>
+  <desc>Schéma d'un dissipateur cylindrique à ailettes radiales en aluminium, avec une LED sur sa face supérieure.</desc>
+  <defs>
+    <linearGradient id="corps" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9aa3ab"/>
+      <stop offset="0.45" stop-color="#e6eaee"/>
+      <stop offset="1" stop-color="#8d969e"/>
+    </linearGradient>
+  </defs>
+  <!-- Corps cylindrique -->
+  <path d="M25 70 L25 175 A60 18 0 0 0 145 175 L145 70 Z" fill="url(#corps)" stroke="#5c646b" stroke-width="2"/>
+  <!-- Ailettes vues de face (arêtes verticales) -->
+  <g stroke="#6f777e" stroke-width="2">
+    <line x1="40" y1="82" x2="40" y2="186"/>
+    <line x1="58" y1="86" x2="58" y2="191"/>
+    <line x1="76" y1="88" x2="76" y2="193"/>
+    <line x1="94" y1="88" x2="94" y2="193"/>
+    <line x1="112" y1="86" x2="112" y2="191"/>
+    <line x1="130" y1="82" x2="130" y2="186"/>
+  </g>
+  <!-- Face supérieure : étoile des ailettes -->
+  <ellipse cx="85" cy="70" rx="60" ry="18" fill="#f2f4f6" stroke="#5c646b" stroke-width="2"/>
+  <g stroke="#9aa3ab" stroke-width="2">
+    <line x1="85" y1="70" x2="145" y2="70"/>
+    <line x1="85" y1="70" x2="135" y2="80"/>
+    <line x1="85" y1="70" x2="112" y2="86"/>
+    <line x1="85" y1="70" x2="85" y2="88"/>
+    <line x1="85" y1="70" x2="58" y2="86"/>
+    <line x1="85" y1="70" x2="35" y2="80"/>
+    <line x1="85" y1="70" x2="25" y2="70"/>
+    <line x1="85" y1="70" x2="35" y2="60"/>
+    <line x1="85" y1="70" x2="58" y2="54"/>
+    <line x1="85" y1="70" x2="85" y2="52"/>
+    <line x1="85" y1="70" x2="112" y2="54"/>
+    <line x1="85" y1="70" x2="135" y2="60"/>
+  </g>
+  <ellipse cx="85" cy="70" rx="24" ry="7" fill="#dfe3e7" stroke="#5c646b" stroke-width="1.5"/>
+  <!-- LED sur sa platine -->
+  <rect x="71" y="56" width="28" height="10" rx="2" fill="#f5f5f5" stroke="#333" stroke-width="1.5"/>
+  <ellipse cx="85" cy="56" rx="9" ry="4" fill="#fff6a8" stroke="#333" stroke-width="1.5"/>
+  <!-- Lumière émise -->
+  <g stroke="#e0a800" stroke-width="3" stroke-linecap="round">
+    <line x1="85" y1="44" x2="85" y2="14"/>
+    <line x1="72" y1="46" x2="56" y2="20"/>
+    <line x1="98" y1="46" x2="114" y2="20"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+LEDSimpleElec
+LEDSimplePhoto
+ThermalFixedTemperature
+ThermalTemperatureTable
+ThermalTemperatureFirstOrder
+ThermalPlate
+LEDJunctionFirstOrder
+LEDWithPlateConstantCurrent
+LEDHeatSinkInCase
+LEDArrayEquivalence
+LEDMatrixCurrentSharing
