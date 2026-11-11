@@ -89,10 +89,19 @@ fichier `LEDSystems/package.mo`.
 
 ## Licence
 
-- Code (fichiers Modelica, scripts Python) : licence BSD-3-Clause, voir [LICENSE](LICENSE).
+- Code (fichiers Modelica, scripts Python) : Mozilla Public License 2.0 (MPL-2.0), voir
+  [LICENSE](LICENSE).
 - Documentation (textes de documentation, guide d'utilisation, ce README) et images de
-  `LEDSystems/Resources/Images` : licence Creative Commons Attribution 4.0 International,
-  voir [LICENSE-CC-BY-4.0.txt](LICENSE-CC-BY-4.0.txt).
+  `LEDSystems/Resources/Images` : licence Creative Commons Attribution - Partage dans les
+  Mêmes Conditions 4.0 International (CC BY-SA 4.0), voir
+  [LICENSE-CC-BY-SA-4.0.txt](LICENSE-CC-BY-SA-4.0.txt).
+
+En pratique : vous pouvez utiliser LEDSystems pour vos propres modèles, y compris dans un
+cadre commercial, sous la licence de votre choix. Si vous **distribuez une version
+modifiée des fichiers de la bibliothèque**, ces fichiers doivent rester sous MPL-2.0 et
+leurs sources être fournies. Une adaptation de la documentation ou des images doit citer
+l'auteur et rester sous CC BY-SA 4.0. Les versions 1.0.0 et antérieures restent
+disponibles sous leurs licences d'origine (BSD-3-Clause et CC BY 4.0).
 
 © 2026 Stéphane Gounelle.
 

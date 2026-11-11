@@ -56,5 +56,5 @@ fausse, la revérifier sur le datasheet.
 
 ---
 
-© 2026 Stéphane Gounelle. Scripts sous licence BSD-3-Clause ([LICENSE](../LICENSE)),
-ce texte sous licence CC BY 4.0.
+© 2026 Stéphane Gounelle. Scripts sous licence MPL-2.0 ([LICENSE](../LICENSE)),
+ce texte sous licence CC BY-SA 4.0 ([LICENSE-CC-BY-SA-4.0.txt](../LICENSE-CC-BY-SA-4.0.txt)).

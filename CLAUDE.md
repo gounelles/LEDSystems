@@ -21,12 +21,12 @@ dépend : pose la question.
 | Langue des identifiants (classes, variables, paramètres) | Anglais. Traduction à l'étape 2, en même temps que la refonte du composant LED et du record de données (pour ne pas retoucher deux fois les mêmes fichiers) |
 | Langue de la documentation (`Documentation(info=...)`, descriptions des paramètres, commentaires) | Français |
 | Convention de nommage | Style MSL : classes en `UpperCamelCase`, paramètres et variables en `lowerCamelCase`. Symboles physiques des datasheets conservés tels quels (`Vf`, `If`, `Iv`, `Phi_v`, `Tj`, `Is`, `n`, `Rs`, `RthJA`, `RthJC`, `TCIV`), avec suffixe après un tiret bas pour les variantes (`Vf_typ`, `If_nom`, `Tj_refIV`). Tables suffixées `_table` |
-| Licence | BSD-3-Clause pour le code, CC BY 4.0 pour la documentation et les images |
+| Licence | MPL-2.0 pour le code, CC BY-SA 4.0 pour la documentation et les images, depuis la 1.1.0 (décision du 2026-11-11 : les modifications de la bibliothèque distribuées doivent rester libres, sans contraindre les modèles qui l'utilisent). Versions ≤ 1.0.0 : BSD-3-Clause et CC BY 4.0. Avis MPL (Exhibit A) dans les scripts Python, pas dans les `.mo` (avis placé dans `LICENSE`, le package racine et `UsersGuide.License`) |
 | Version de la bibliothèque | 0.4.0 au départ (non fonctionnelle). Numérotation sémantique : chaque étape validée du plan monte la version mineure (étape 1 → 0.5.0 … étape 5 → 0.9.0), l'étape 6 (publication) donne 1.0.0 |
 | Version de la MSL | 4.1.0 (seule version installée, effectivement chargée par OpenModelica). À l'étape 1 : mettre à jour l'annotation `uses` et la valeur par défaut de `--msl` dans les deux scripts |
 | Version d'OpenModelica | 1.26.1 |
-| Titulaire des droits et contact | Stéphane Gounelle (gounelles@gmail.com) : ligne de copyright BSD-3-Clause, attribution CC BY 4.0, `UsersGuide.Contact`, README |
-| Images de `Resources/Images/` | Provenance de `LEDCase.jpg` et `LEDHeatsink.jpg` inconnue : remplacées par des schémas SVG dessinés pour le projet (CC BY 4.0, Stéphane Gounelle) |
+| Titulaire des droits et contact | Stéphane Gounelle (gounelles@gmail.com) : ligne de copyright (MPL-2.0), attribution CC BY-SA 4.0, `UsersGuide.Contact`, README |
+| Images de `Resources/Images/` | Provenance de `LEDCase.jpg` et `LEDHeatsink.jpg` inconnue : remplacées par des schémas SVG dessinés pour le projet (CC BY-SA 4.0 depuis la 1.1.0, Stéphane Gounelle) |
 | Publication de `CLAUDE.md` | Publié. Le README et le `UsersGuide` précisent l'origine : bibliothèque écrite à la main par l'auteur (version 0.4.0, non fonctionnelle), restructurée, corrigée, validée et documentée avec Claude Code (étapes 1 à 6) |
 | Dépôt GitHub | https://github.com/gounelles/LEDSystems (nom = nom de la bibliothèque) ; branche `main` (renommage local de `master` à l'étape 6.8, sans réécriture d'historique) |
 | Historique publié | Dépôt neuf : un commit initial propre (sans les anciennes images JPEG de provenance inconnue, présentes dans l'historique y compris en base64 dans le commit initial) ; l'historique complet reste dans le dépôt local actuel |
@@ -638,3 +638,16 @@ Résultats de référence au départ : `verifier.py` **6/7**, `tester_datasheet.
   avertissement ; `tester_datasheet.py` 8/8 ; `tester_cas_usage.py` code 0 (DS55 29/29,
   DS242 30/32 dont 2 écarts DS, FX2L 33/33). Branche locale `master` renommée `main`.
   Commandes de publication (dépôt neuf, commit initial unique) fournies à l'utilisateur.
+- 2026-11-11 — Publication — Dépôt public https://github.com/gounelles/LEDSystems mis en
+  ligne par l'utilisateur (push après `gh auth login`) : un seul commit `LEDSystems 1.0.0`,
+  tag `v1.0.0`, branche `main`, préparés dans un dossier séparé à partir de `git archive v1.0.0`.
+  Le dépôt de travail garde l'historique complet, sans remote. Toute évolution passera par une
+  version 1.0.x / 1.1.0, avec notes de version et report dans le dépôt public à convenir.
+- 2026-11-11 — **Version 1.1.0** (tag `v1.1.0`) — Changement de licence (décision de
+  l'utilisateur) : code en MPL-2.0 (copyleft limité aux fichiers de la bibliothèque),
+  documentation et images en CC BY-SA 4.0. `LICENSE` = texte MPL-2.0 officiel,
+  `LICENSE-CC-BY-SA-4.0.txt` (legalcode.txt de creativecommons.org) remplace
+  `LICENSE-CC-BY-4.0.txt` (supprimé avec accord) ; avis MPL dans les 6 scripts Python
+  (SPDX `MPL-2.0`), pas dans les `.mo` ; SVG, README, `outils/README.md`, package racine,
+  `UsersGuide.License` (réécrit) et notes de version mis à jour. Modèles inchangés.
+  `verifier.py` 14/14 sans avertissement ; `tester_datasheet.py` 8/8.

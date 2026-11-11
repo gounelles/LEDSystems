@@ -2,8 +2,8 @@
 <!--
   LEDCase.svg : coupe d'un boîtier fermé contenant la LED sur son dissipateur.
   Bibliothèque Modelica LEDSystems.
-  © 2026 Stéphane Gounelle. Licence Creative Commons Attribution 4.0 International (CC BY 4.0) :
-  https://creativecommons.org/licenses/by/4.0/
+  © 2026 Stéphane Gounelle. Licence Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International
+  (CC BY-SA 4.0) : https://creativecommons.org/licenses/by-sa/4.0/
 -->
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
   <title>Boîtier fermé (coupe)</title>

@@ -3,6 +3,22 @@ class ReleaseNotes "Notes de version"
   extends Modelica.Icons.ReleaseNotes;
 
   annotation (Documentation(info="<html>
+<h4>Version 1.1.0 (2026-11-11)</h4>
+<p>Changement de licence ; modèles et calculs <strong>inchangés</strong> (trajectoires et
+résultats de validation identiques à ceux de la version 1.0.0).</p>
+<ul>
+<li>Code (fichiers Modelica, scripts Python) : <strong>MPL-2.0</strong> au lieu de
+    BSD-3-Clause. Les fichiers de la bibliothèque modifiés et distribués doivent rester
+    sous MPL-2.0, avec leurs sources ; les modèles qui utilisent la bibliothèque ne sont
+    pas concernés.</li>
+<li>Documentation et images : <strong>CC BY-SA 4.0</strong> au lieu de CC BY 4.0 (les
+    adaptations restent sous la même licence).</li>
+<li><a href=\"modelica://LEDSystems.UsersGuide.License\">UsersGuide.License</a> réécrit :
+    ce que permettent les deux licences, avis de licence de la MPL.</li>
+</ul>
+<p>La version 1.0.0 reste utilisable sous BSD-3-Clause et CC BY 4.0 par ceux qui l'ont
+reçue.</p>
+
 <h4>Version 1.0.0 (2026-11-10)</h4>
 <p>Première version publiée. Les calculs sont <strong>inchangés</strong> : les trajectoires
 de tous les exemples et les résultats de validation sont identiques à ceux de la version

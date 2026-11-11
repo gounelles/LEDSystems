@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: BSD-3-Clause
+# SPDX-License-Identifier: MPL-2.0
 # Copyright (c) 2026 Stéphane Gounelle
+# This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+# If a copy of the MPL was not distributed with this file, You can obtain one at
+# https://mozilla.org/MPL/2.0/.
 """Vérifie, compile et simule tous les exemples de la bibliothèque.
 
 Usage (depuis la racine du projet) :

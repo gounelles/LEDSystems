@@ -90,10 +90,19 @@ See `UsersGuide.ReleaseNotes`. The current version is given in the annotation of
 
 ## License
 
-- Code (Modelica files, Python scripts): BSD-3-Clause license, see [LICENSE](LICENSE).
+- Code (Modelica files, Python scripts): Mozilla Public License 2.0 (MPL-2.0), see
+  [LICENSE](LICENSE).
 - Documentation (documentation texts, user's guide, this README) and images in
-  `LEDSystems/Resources/Images`: Creative Commons Attribution 4.0 International license,
-  see [LICENSE-CC-BY-4.0.txt](LICENSE-CC-BY-4.0.txt).
+  `LEDSystems/Resources/Images`: Creative Commons Attribution-ShareAlike 4.0
+  International license (CC BY-SA 4.0), see
+  [LICENSE-CC-BY-SA-4.0.txt](LICENSE-CC-BY-SA-4.0.txt).
+
+In practice: you may use LEDSystems in your own models, including commercially, under
+the license of your choice. If you **distribute modified versions of the library's
+files**, those files must remain under MPL-2.0 and their source must be made available.
+Adaptations of the documentation or images must credit the author and remain under
+CC BY-SA 4.0. Versions 1.0.0 and earlier remain available under their original licenses
+(BSD-3-Clause and CC BY 4.0).
 
 © 2026 Stéphane Gounelle.
 

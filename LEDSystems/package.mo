@@ -3,8 +3,8 @@ package LEDSystems "Bibliothèque de LED : modèles électrique, photométrique 
   extends Modelica.Icons.Package;
 
   annotation (
-    version="1.0.0",
-    versionDate="2026-11-10",
+    version="1.1.0",
+    versionDate="2026-11-11",
     uses(Modelica(version="4.1.0")),
     Documentation(info="<html>
 <h4>LEDSystems</h4>
@@ -38,8 +38,8 @@ ou parallèle, d'un dissipateur ; vérification de la température de jonction.<
 dans l'ordre : leur documentation dit quoi observer et donne les valeurs attendues.</p>
 <p>Bibliothèque fondée sur la seule Modelica Standard Library (version 4.1.0), testée
 avec OpenModelica 1.26.1.</p>
-<p>&copy; 2026 Stéphane Gounelle. Code sous licence BSD-3-Clause, documentation et images
-sous licence CC BY 4.0 (voir <a href=\"modelica://LEDSystems.UsersGuide\">UsersGuide</a>).</p>
+<p>&copy; 2026 Stéphane Gounelle. Code sous licence MPL-2.0, documentation et images
+sous licence CC BY-SA 4.0 (voir <a href=\"modelica://LEDSystems.UsersGuide\">UsersGuide</a>).</p>
 </html>")
   );
 end LEDSystems;
